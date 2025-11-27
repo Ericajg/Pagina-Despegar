@@ -1,0 +1,2013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DespegarForm</class>
+ <widget class="QMainWindow" name="DespegarForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>995</width>
+    <height>484</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #004;
+}
+QPushButton {
+    background-color: #004;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+QPushButton:hover {
+    background-color: #cc003b;
+}
+
+QComboBox, QLineEdit {
+    background: white;
+    border-radius: 12px;
+    padding: 8px;
+    border: 2px solid #dddddd;
+    font-size: 10px;
+}
+
+QComboBox:hover, QLineEdit:hover {
+    border: 2px solid #ff0049;
+}
+QWidget {
+    background-color: #1f0060;
+}
+
+QToolButton {
+    background: transparent;
+    border: none;
+    padding: 6px;
+}
+
+QToolButton:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+QLabel {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+QToolButton {
+    background: transparent;
+    color: white;
+    font-size: 11px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+QToolButton:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+QToolButton:pressed {
+    background: rgba(255,255,255,0.25);
+}
+#cmbDesde QAbstractItemView, 
+#cmbHacia QAbstractItemView {
+    background-color: #1f0060;
+    color: white;
+    selection-background-color: #ff0049;
+    selection-color: white;
+}
+</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>981</width>
+      <height>78</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="layoutOpciones">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget_5" native="true">
+       <property name="styleSheet">
+        <string notr="true">Q	Widget {
+background-color:#004;
+
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>1</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: white;
+    font-weight: bold;
+    font-size: 20pt;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Vuelos</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSoloIda">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>106</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>76</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QPushButton:hover {
+    background-color: #f2f2f2;
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 1px solid #0066cc;
+}
+QPushButton {
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 23px;
+    padding: 6px 12px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 40px;
+    max-height: 40px;
+}
+
+QPushButton:hover {
+    background-color: #f0f0f0;
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: #393c8f;
+    border: 2px solid #0066cc;
+}
+QPushButton {
+    background-color: transparent;   /* Sin bloque blanco fuerte */
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 16px;
+    padding: 6px 10px;
+    min-width: 90px;
+    max-width: 90px;
+    min-height: 32px;
+    max-height: 32px;
+}
+
+QPushButton:hover {
+    background-color: #e6f0ff;  /* Celestito leve al pasar el mouse */
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: #004;;
+    border: 1px solid #0066cc;
+}
+QPushButton {
+    color: white;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 23px;
+    padding: 6px 12px;
+    min-width: 80px;
+    max-width: 50px;
+    min-height: 34px;
+    max-height: 34px;
+}
+
+QPushButton:hover {
+    background-color: #e0f0ff;
+}
+
+QPushButton:checked {
+    background-color: #007bff;
+    color:  #393c8f;
+    font-weight: bold;
+    border: 2px solid #007bff;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Solo ida</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnIdaVuelta">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>126</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>126</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    padding: 6px 12px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 35px;
+    max-height: 35px;
+}
+
+QPushButton:hover {
+    background-color: #f2f2f2;
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 1px solid #0066cc;
+}
+QPushButton {
+    background-color: white;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 18px;
+    padding: 6px 12px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 40px;
+    max-height: 40px;
+}
+
+QPushButton:hover {
+    background-color: #f0f0f0;
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 2px solid #0066cc;
+}
+QPushButton {
+    background-color: transparent;   /* Sin bloque blanco fuerte */
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 16px;
+    padding: 6px 10px;
+    min-width: 90px;
+    max-width: 90px;
+    min-height: 32px;
+    max-height: 32px;
+}
+
+QPushButton:hover {
+    background-color: #e6f0ff;  /* Celestito leve al pasar el mouse */
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 1px solid #0066cc;
+}
+QPushButton {
+    color: white;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 23px;
+    padding: 6px 12px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 34px;
+    max-height: 34px;
+}
+
+QPushButton:hover {
+    background-color: #e0f0ff;
+}
+
+QPushButton:checked {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #007bff;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Ida y vuelta</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnMultidestino">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>146</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>126</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    padding: 6px 12px;
+    min-width: 120px;
+    max-width: 120px;
+    min-height: 35px;
+    max-height: 35px;
+}
+
+QPushButton:hover {
+    background-color: #f2f2f2;
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 1px solid #0066cc;
+}
+QPushButton {
+    background-color: white;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 18px;
+    padding: 6px 12px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 40px;
+    max-height: 40px;
+}
+
+QPushButton:hover {
+    background-color: #f0f0f0;
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 2px solid #0066cc;
+}
+QPushButton {
+    background-color: transparent;   /* Sin bloque blanco fuerte */
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 16px;
+    padding: 6px 10px;
+    min-width: 90px;
+    max-width: 90px;
+    min-height: 32px;
+    max-height: 32px;
+}
+
+QPushButton:hover {
+    background-color: #e6f0ff;  /* Celestito leve al pasar el mouse */
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 1px solid #0066cc;
+}
+QPushButton {
+    color: white;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 23px;
+    padding: 6px 12px;
+    min-width: 120px;
+    max-width: 100px;
+    min-height: 34px;
+    max-height: 34px;
+}
+
+QPushButton:hover {
+    background-color: #e0f0ff;
+}
+
+QPushButton:checked {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #007bff;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Multidestino</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnVueloAlojamiento">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>226</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>126</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #1f0060;
+    color: #333333;
+    font-size: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    padding: 6px 12px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 35px;
+    max-height: 35px;
+}
+
+QPushButton:hover {
+    background-color: #f2f2f2;
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 1px solid #0066cc;
+}
+QPushButton {
+    background-color: white;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 23px;
+    padding: 6px 12px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 40px;
+    max-height: 40px;
+}
+
+QPushButton:hover {
+    background-color: #f0f0f0;
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 2px solid #0066cc;
+}
+QPushButton {
+    background-color: #1f0060;   /* Sin bloque blanco fuerte */
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 23px;
+    padding: 6px 10px;
+    min-width: 90px;
+    max-width: 90px;
+    min-height: 32px;
+    max-height: 32px;
+}
+
+QPushButton:hover {
+    background-color: #e6f0ff;  /* Celestito leve al pasar el mouse */
+}
+
+QPushButton:checked {
+    background-color: #0066cc;
+    color: white;
+    border: 1px solid #0066cc;
+}
+QPushButton {
+    color: white;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 23px;
+    padding: 6px 12px;
+    min-width: 200px;
+    max-width: 100px;
+    min-height: 34px;
+    max-height: 34px;
+}
+
+QPushButton:hover {
+    background-color: #e0f0ff;
+}
+
+QPushButton:checked {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #007bff;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>✈️ Vuelo + 🛏 Alojamiento</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="lblDescuento&#10;">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>130</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: #28a745;
+    color: white;
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-weight: bold;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Hasta 30%  de ahorro</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>208</y>
+      <width>1121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="layoutBusqueda">
+     <property name="spacing">
+      <number>7</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+       <widget class="QPushButton" name="btnPasajerosClase">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>10</y>
+          <width>230</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit, QPushButton {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnFechaIda">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>10</y>
+          <width>150</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+QPushButton {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnFechaVuelta">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>10</y>
+          <width>150</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit, QPushButton {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+QPushButton {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnBuscar">
+        <property name="geometry">
+         <rect>
+          <x>889</x>
+          <y>20</y>
+          <width>100</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: red; color: white; border-radius: 20px; padding: 5px 15px;</string>
+        </property>
+        <property name="text">
+         <string>🔍 Buscar</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>341</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <widget class="QLineEdit" name="txtOrigen">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>195</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>195</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit, QPushButton {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+
+QPushButton {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 8px;
+}
+QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 5px 10px;
+}
+</string>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="txtDestino">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>10</y>
+           <width>195</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>195</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit, QPushButton {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 8px;
+}
+</string>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Origen">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>47</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #6e6e6e;        /* Gris medio */
+background-color: white;
+font-weight: bold;
+border: none;
+</string>
+         </property>
+         <property name="text">
+          <string>ORIGEN</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblDestino">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>15</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #6e6e6e;        /* Gris medio */
+background-color: white;
+font-weight: bold;
+border: none;
+</string>
+         </property>
+         <property name="text">
+          <string>DESTINO</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>113</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    color: #6e6e6e;  /* Texto gris suave */
+    background-color: white;
+    border: none;
+    font-weight: bold;
+}
+</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>40</y>
+           <width>113</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    color: #6e6e6e;  /* Texto gris suave */
+    background-color: white;
+    border: none;
+    font-weight: bold;
+}
+</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+background-color: white;
+border: 2px solid gray;
+border-radius: 8px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>20</y>
+           <width>21</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../../../Downloads/gps_16547433.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cmbDesde">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>31</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+ font-style: italic;
+color: gray;
+}
+
+
+</string>
+         </property>
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentText">
+          <string>Ingresa desde </string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cmbHacia">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>31</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+     color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+ font-style: italic;
+color: gray;
+}
+
+</string>
+         </property>
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentText">
+          <string>Ingresa hacia donde</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="lblFecha">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>20</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #6e6e6e;        /* Gris medio */
+background-color: white;
+font-weight: bold;
+border: none;
+</string>
+        </property>
+        <property name="text">
+         <string>FECHA</string>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="FechaVuelta">
+        <property name="geometry">
+         <rect>
+          <x>549</x>
+          <y>40</y>
+          <width>81</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QDateEdit {
+ color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lblcalendario">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>40</y>
+          <width>21</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../../../Downloads/icons8-calendar-50(1).png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lblcalendario2">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>40</y>
+          <width>21</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../../../Downloads/icons8-calendar-50(1).png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_usuario">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>43</y>
+          <width>21</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../../Imágenes/Screenshots/icons8-customer-50.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="FechaIda">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>40</y>
+          <width>91</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QDateEdit {
+ color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmbPasajeros">
+        <property name="geometry">
+         <rect>
+          <x>698</x>
+          <y>40</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+     color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+ font-style: italic;
+color: gray;
+}
+</string>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnPasajeros">
+        <property name="geometry">
+         <rect>
+          <x>664</x>
+          <y>10</y>
+          <width>181</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+color: #6e6e6e;        /* Gris medio */
+background-color: white;
+font-weight: bold;
+border: none;
+}</string>
+        </property>
+        <property name="text">
+         <string>PASAJERO Y CLASE</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QToolButton" name="toolButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Alojamiento</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/cama-alternativa.png</normaloff>../../../.designer/backup/iconos/cama-alternativa.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>80</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>  vuelos</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/plano.png</normaloff>../../../.designer/backup/iconos/plano.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_3">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>70</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Paquetes</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/maleta-alternativa.png</normaloff>../../../.designer/backup/iconos/maleta-alternativa.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>70</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Ofertas</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/llama-de-fuego-curvada.png</normaloff>../../../.designer/backup/iconos/llama-de-fuego-curvada.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_5">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>70</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Actividades</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/billete.png</normaloff>../../../.designer/backup/iconos/billete.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_6">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>70</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Autos</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/lado-del-coche.png</normaloff>../../../.designer/backup/iconos/lado-del-coche.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_7">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>70</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Disney</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/mickey-mouse.png</normaloff>../../../.designer/backup/iconos/mickey-mouse.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_8">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>70</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Asistencias</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/botiquin-medico.png</normaloff>../../../.designer/backup/iconos/botiquin-medico.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_9">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>70</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Traslados</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/lado-del-camion.png</normaloff>../../../.designer/backup/iconos/lado-del-camion.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_10">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>10</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Para ventas 0810 810 9994</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/auriculares.png</normaloff>../../../.designer/backup/iconos/auriculares.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_11">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>0</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Anuncia tus propiedades</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/casa.png</normaloff>../../../.designer/backup/iconos/casa.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_12">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>0</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Mis viajes</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/seguro-de-viaje.png</normaloff>../../../.designer/backup/iconos/seguro-de-viaje.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_13">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Ayuda</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/informacion.png</normaloff>../../../.designer/backup/iconos/informacion.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_14">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton {
+    color: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Carrito</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/carrito-de-compras.png</normaloff>../../../.designer/backup/iconos/carrito-de-compras.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_15">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/backup/iconos/icono_despegar.png</normaloff>../../../.designer/backup/iconos/icono_despegar.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>220</width>
+      <height>220</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>117</y>
+      <width>1021</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #D9B3FF;
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnVerReservas">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ver resevas</string>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>lblDescuento
+</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>toolButton</zorder>
+   <zorder>toolButton_2</zorder>
+   <zorder>toolButton_3</zorder>
+   <zorder>toolButton_4</zorder>
+   <zorder>toolButton_5</zorder>
+   <zorder>toolButton_6</zorder>
+   <zorder>toolButton_7</zorder>
+   <zorder>toolButton_8</zorder>
+   <zorder>toolButton_9</zorder>
+   <zorder>toolButton_10</zorder>
+   <zorder>toolButton_11</zorder>
+   <zorder>toolButton_12</zorder>
+   <zorder>toolButton_13</zorder>
+   <zorder>toolButton_14</zorder>
+   <zorder>toolButton_15</zorder>
+   <zorder>btnVerReservas</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

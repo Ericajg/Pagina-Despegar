@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VentanaPasajeros</class>
+ <widget class="QDialog" name="VentanaPasajeros">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>550</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="2">
+    <widget class="QSpinBox" name="spinMenores">
+     <property name="maximumSize">
+      <size>
+       <width>40</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lb_clase">
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}
+</string>
+     </property>
+     <property name="text">
+      <string>CLASE</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="mnredad">
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Hasta 17 años</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QComboBox" name="comboClase">
+     <item>
+      <property name="text">
+       <string>Económica</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Premium Primera Clase</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Premium Economy</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ejecutiva/Business</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Primera Clase</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Premium Business</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QSpinBox" name="spinMayores">
+     <property name="maximumSize">
+      <size>
+       <width>40</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QPushButton" name="btnAplicar">
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+}
+QPushButton {
+    background-color: #4B00FF;   /* Color violeta fuerte como Despegar */
+    color: white;                /* Texto blanco */
+    border-radius: 10px;         /* Bordes redondeados */
+    padding: 6px 12px;           /* Espaciado interno */
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #3700B3;   /* Color cuando pasás el mouse */
+}
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>Aplicar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="mnr">
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Menores</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblEdadMenor1">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>“Edad del menor 1”</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="myr">
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Mayores</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblmyredad">
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Desde 18 años</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="8">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblEdadMenor2">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #6e6e6e;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+color: gray;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>“Edad del menor 2”</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QComboBox" name="comboEdadMenor1"/>
+   </item>
+   <item row="5" column="2">
+    <widget class="QComboBox" name="comboEdadMenor2"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
